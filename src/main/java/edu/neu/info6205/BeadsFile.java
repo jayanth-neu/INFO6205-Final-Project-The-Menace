@@ -11,7 +11,7 @@ public class BeadsFile {
         String s7 = "NNNXOXOXO";
 
         Operations op = new Operations();
-        CSVreadWrite.writeCSV("beads_data.csv",
+        CSVreadwrite.writeCSV("beads_data.csv",
                 "Pattern,Blue,Red,Yellow,Black,White,Orange,Pink,Green,Brown", false);
 
         Set<String> hashSet1 = op.finalArrays(s1);
@@ -19,7 +19,7 @@ public class BeadsFile {
         hashSet1.forEach((n) -> {
 
             try {
-                CSVreadWrite.writeCSV("beads_data.csv",
+                CSVreadwrite.writeCSV("beads_data.csv",
                                         n + "," + op.beadPositionNumbers(n,alpha1),true);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -31,7 +31,7 @@ public class BeadsFile {
 //        System.out.println(hashSet3.size());
         hashSet3.forEach((n) -> {
             try {
-                CSVreadWrite.writeCSV("beads_data.csv",
+                CSVreadwrite.writeCSV("beads_data.csv",
                                         n + "," + op.beadPositionNumbers(n,alpha2),true);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -42,7 +42,7 @@ public class BeadsFile {
 //        System.out.println(hashSet5.size());
         hashSet5.forEach((n) -> {
             try {
-                CSVreadWrite.writeCSV("beads_data.csv",
+                CSVreadwrite.writeCSV("beads_data.csv",
                         n + "," + op.beadPositionNumbers(n,alpha3),true);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -53,7 +53,7 @@ public class BeadsFile {
 //        System.out.println(hashSet7.size());
         hashSet7.forEach((n) -> {
             try {
-                CSVreadWrite.writeCSV("beads_data.csv",
+                CSVreadwrite.writeCSV("beads_data.csv",
                         n + "," + op.beadPositionNumbers(n,alpha4),true);
             } catch (IOException e) {
                 e.printStackTrace();

@@ -33,7 +33,7 @@ public class Game {
             logger.info(temp);
             op.printArray(op.stringToArray(state), logger);
         }
-        patterns = CSVreadWrite.readCSVline("beads_data.csv");
+        patterns = CSVreadwrite.readCSVline("beads_data.csv");
 
         int step=0;
         while(op.gameEndCheck(op.stringToArray(state)).equals("In Progress")) {
@@ -99,12 +99,12 @@ public class Game {
 
 
         //Updating patterns and beads count file
-        CSVreadWrite.writeCSV("beads_data.csv",
+        CSVreadwrite.writeCSV("beads_data.csv",
                                 "Pattern,Blue,Red,Yellow,Black,White,Orange,Pink,Green,Brown", false);
         patterns.forEach((k, v)
                 -> {
             try {
-                CSVreadWrite.writeCSV("beads_data.csv",
+                CSVreadwrite.writeCSV("beads_data.csv",
                         k+","+ Arrays.toString(v).substring(1,Arrays.toString(v).length()-1), true);
             } catch (IOException e) {
                 e.printStackTrace();
