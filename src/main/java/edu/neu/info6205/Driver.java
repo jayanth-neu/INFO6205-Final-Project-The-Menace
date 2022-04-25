@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Driver {
@@ -125,7 +124,7 @@ public class Driver {
 				ex.printStackTrace();
 			}
 
-			CSVreadWrite.writeCSV("stats.csv", "Result", false);
+			CSVreadwrite.writeCSV("stats.csv", "Result", false);
 		}
 
 
@@ -154,7 +153,7 @@ public class Driver {
 					logger.info(loggingData);
 
 					try {
-						CSVreadWrite.writeCSV("stats.csv", result, true);
+						CSVreadwrite.writeCSV("stats.csv", result, true);
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
