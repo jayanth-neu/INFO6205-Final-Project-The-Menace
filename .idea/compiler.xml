@@ -6,8 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="INFO6205-Final-Project-The-Menace" />
-        <module name="INFO6205-Final-Project-The-Menace1" />
+        <module name="menaceMachine" />
       </profile>
     </annotationProcessing>
   </component>
