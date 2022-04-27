@@ -290,8 +290,6 @@ public class OptimalStrategy {
         return shouldBeEmpty;
     }
 
-
-
     public int pythonMod(int dividend, int divisor) {
         return ((dividend % divisor) + divisor) % divisor;
     }

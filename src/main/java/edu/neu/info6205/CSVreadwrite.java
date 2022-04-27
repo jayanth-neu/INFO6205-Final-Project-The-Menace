@@ -35,7 +35,6 @@ public class CSVreadwrite {
         String [] record = content.split(",");
         //Write the record to file
         writer.writeNext(record);
-
         //close the writer
         writer.close();
     }

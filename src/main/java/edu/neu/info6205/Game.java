@@ -53,14 +53,12 @@ public class Game {
                     }
                 }
             }
-
             else {
                 List<String> allStates = new ArrayList<>();
                 allStates = op.nextState(patterns, picked, state, states, modifiedStates);
                 state = allStates.get(1);
                 modifiedState = allStates.get(0);
             }
-
 
             if(watch) {
                 String temp = "*****Menace Machine Move-" + step + "*****\n";
@@ -69,7 +67,6 @@ public class Game {
                 op.printArray(op.stringToArray(state), logger);
             }
             if(!op.gameEndCheck(op.stringToArray(state)).equals("In Progress")) break;
-
 
 
             //Human gameplay
@@ -81,7 +78,6 @@ public class Game {
             modifiedState = state;
             states.add(state);
             modifiedStates.add(modifiedState);
-
 
             if(watch) {
                 String temp = "*****Human Move-" + step + "*****\n";
@@ -95,7 +91,7 @@ public class Game {
         //Rewarding
         Rewards r = new Rewards();
         r.rewards(op.gameEndCheck(op.stringToArray(state)), patterns, picked, w, d, l);
-//        System.out.println(op.gameEndCheck(op.stringToArray(state)));
+//      System.out.println(op.gameEndCheck(op.stringToArray(state)));
 
 
         //Updating patterns and beads count file

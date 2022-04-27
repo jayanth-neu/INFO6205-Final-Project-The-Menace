@@ -65,8 +65,6 @@ public class Operations {
 		    		}
 		    	}
 	    }
-//	    Permutations.hash_Set.forEach((n) -> System.out.println(n));
-//	    Permutations.hash_Set.forEach((n) -> printArray(stringToArray(n)));
 
 	    StringBuilder string = new StringBuilder(s1);
 		strings.forEach((n) -> string.setCharAt(n.indexOf("B"),'B'));
@@ -92,15 +90,12 @@ public class Operations {
 		    		}
 		    	}
 	    }
-//	    Permutations.hash_Set.forEach((n) -> System.out.println(n));
-//	    Permutations.hash_Set.forEach((n) -> printArray(stringToArray(n)));
 	    return per.hash_Set;
 	}
 
 	//Find similar arrays to an array through mirror images and rotations
 	public Set<String> similarArrays(String s1) {
 		// TODO Auto-generated method stub
-
 	    Set<String> strings = new HashSet<>();
 
 		String[][] s2 = rotateArray(stringToArray(s1));
@@ -296,7 +291,6 @@ public class Operations {
 		StringBuilder sb2 = new StringBuilder(oldModifiedState);
 		sb2.setCharAt(modifiedPickedBead, 'B');
 		String temp = sb2.toString();
-
 
 		if(mir==1) {
 			temp = arrayToString(mirrorImage(stringToArray(temp)));

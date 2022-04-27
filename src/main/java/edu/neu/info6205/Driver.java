@@ -105,19 +105,7 @@ public class Driver {
 			try
 			{
 				// Delay for 2 seconds
-				Thread.sleep(1000);
-			}
-			catch(InterruptedException ex)
-			{
-				ex.printStackTrace();
-			}
-
-			System.out.println("Please re-train the menace machine now!!");
-
-			try
-			{
-				// Delay for 2 seconds
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 			}
 			catch(InterruptedException ex)
 			{
@@ -127,7 +115,30 @@ public class Driver {
 			CSVreadwrite.writeCSV("stats.csv", "Result", false);
 		}
 
+		System.out.println("\nCurrent value of p="+p);
+		System.out.print("Change p value? (Y/N): ");
+		userInput = myObj.nextLine().toUpperCase();
+		while (!userInput.equals("Y") && !userInput.equals("N")) {
+			System.out.print("Enter valid input (Y/N): ");
+			userInput = myObj.nextLine().toUpperCase();
+		}
 
+
+		if (userInput.equals("Y")) {
+			try {
+				System.out.print("Enter p value: ");
+				String userInput1 = myObj.nextLine().toUpperCase();
+				p = Double.parseDouble(userInput1);
+				System.out.println("Please re-train the menace machine now!!");
+
+			} catch (Exception e) {
+				System.out.println("Enter valid input!");
+				e.printStackTrace();
+			}
+		}
+
+		else if (paraChangeFlag == 1)
+			System.out.println("\nPlease re-train the menace machine now!!");
 
 		System.out.print("\nTrain Menace Machine/Watch Final Game? (T/W): ");
 		userInput = myObj.nextLine().toUpperCase();
