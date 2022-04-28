@@ -14,7 +14,7 @@ public class Driver {
 		int alpha2 = 4;
 		int alpha3 = 2;
 		int alpha4 = 1;
-		int beta = 3;
+		int beta = 2;
 		int gamma = 1;
 		int delta = 1;
 		double p = 0.9;
@@ -26,7 +26,7 @@ public class Driver {
 		System.out.println("**********DEFAULT PARAMETER VALUES**********\n");
 		System.out.println("*****Each alpha value below is count of each color bead in the match box\n");
 		System.out.println("alpha: 8,4,2,1 (For 1st, 2nd, 3rd & 4th steps of Menace machine respectively)");
-		System.out.println("beta : 3 (the number of ”beads” to add to the “matchbox” in the event of a win)");
+		System.out.println("beta : 2 (the number of ”beads” to add to the “matchbox” in the event of a win)");
 		System.out.println("gamma: 1 (the number of ”beads” to take to the “matchbox” in the event of a loss)");
 		System.out.println("delta: 1 (the number of ”beads” to add to the “matchbox” in the event of a draw)\n");
 
