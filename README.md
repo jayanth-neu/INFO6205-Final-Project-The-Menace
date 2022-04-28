@@ -14,3 +14,6 @@ Team Members - Jayanth Vakkalagadda, Sai Meghana Surapaneni
 7) In either options, you can choose multiple iterations
 8) If you want to see the console output, select the watch game option otherwise the training option
 9) If watch final game option is selected, logs for all the steps of the players are also recorded along with the parameters and game result
+
+
+-- Logging requirement is performed using slf4j and logback
